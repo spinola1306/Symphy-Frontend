@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta charset="utf-8">
+  <title>Symphy</title>
+  <meta content="Stephan Schmidt" name="author">
+  <link rel="stylesheet" type="text/css" href= "css/jquery-ui.css" >	    <!-- jquery-ui css -->
+  <link rel="stylesheet" type="text/css" href= "css/symphy.css">            <!-- aqim css -->					
+</head>
+
+<body>
+
+
+<base target="_parent">
+
+<div id="status" >
+
+<!--  box1 Status MESSWERTE-->
+<div id="stat1_box" >	
+<img id="stat1_symbol" src="pic/dummy.png"  height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px"  >
+<div id="stat1_name"   class="name" >  </div>
+<div id="stat1_info"   class="info_c"  ></div>	 
+
+</div>	<!-- stat1_box -->
+
+<!--  box2 Status BELEUCHTUNG-->
+<div id="stat2_box" >	 
+<img id="stat2_symbol" src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" >	
+<div id="stat2_name"   class="name" ></div>	
+<img id="stat2_mode"   src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px" >
+<div id="stat2_toggle" class="info" ></div>
+<div id="stat2_start"  class="start" ></div>
+<div id="stat2_end"    class="end" ></div>
+</div><!-- stat2_box -->
+
+<!--  box3 Status SYSTEM -->
+<div id="stat3_box" >
+<img id="stat3_symbol" src="pic/sys_2.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px"  >
+<img id="ping"         src="pic/dummy.png" height="25" width="25" align= "left" style="margin: -78px 0px 0px 122px"   >  
+<img id="ext"          src="pic/dummy.png" height="25" width="25" align= "left" style="margin: -78px 0px 0px 122px"   >  
+<div id="stat3_name"   class="name" ></div>		
+<div id="stat3_info"   class="info_c" ></div>	 
+</div><!-- stat3_box -->
+
+<!--  box4  Modus -->
+<div id="stat4_box" >	
+<img id="stat4_symbol" src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px"  >	<!-- system status tux -->
+<div id="stat4_name"   class="name" >   </div>		
+<div id="stat4_info"   class="info_c" > </div>	
+</div><!-- stat4_box -->  
+
+
+
+
+  
+<!-- sende status 
+<div id="my_time" class="stat_date" ></div>		
+<div id="dt" class="stat_date" ></div>	
+<div id="delta_t" class="stat_delta_t" ></div>	
+<div id="alive" class="stat_std" ></div>
+<div id="wd" class="stat_std" ></div>
+<div id="up" class="stat_std" ></div>	
+<div id="mode" class="stat_std" ></div>
+<div id="software" class="stat_std" ></div>
+<div id="ping_txt" class="stat_ping" ></div>
+-->
+
+
+
+<div id="data_box" >
+
+<!-- Temp -->
+<div id="T0_box" >  	<!-- T0 Wasser1 -->
+<img id="T0_symbol" src="pic/dummy.png"  height="150" width="150" align= "left" style="margin: 0px 3000px 0px 100px" >	<!-- sensor symbol -->
+<div id="T0_name" class="t_name" ></div>		<!-- Messwert Bezeichnung-->
+<div id="T0_value" class="t_val" ></div>		<!-- Messwert -->
+<div id="T0_min1" class="t_min"></div>	<!--min -->
+<div id="T0_max1" class="t_max"></div>	<!--min -->
+<div id="T0_avg1" class="t_avg"></div>	<!--min -->
+<div id="T0_trend1" class="t_trend"></div>	<!--min -->
+<div id="gauge0" align= "center" class="auto-style3" > </div>
+</div>	<!-- T0_box -->
+
+
+<div id="T1_box" >  	<!-- T1-Innen Raum -->
+<img id="T1_symbol" src="pic/dummy.png"  height="150" width="150" align= "left" style="margin: 0px 3000px 0px 100px" >	<!-- sensor symbol -->
+<div id="T1_name" class="t_name" ></div>		<!-- Messwert Bezeichnung-->
+<div id="T1_value" class="t_val" ></div>		<!-- Messwert -->
+<div id="T1_min1" class="t_min"></div>	<!--min -->
+<div id="T1_max1" class="t_max"></div>	<!--min -->
+<div id="T1_avg1" class="t_avg"></div>	<!--min -->
+<div id="T1_trend1" class="t_trend"></div>	<!--min -->
+<div id="gauge1" align= "center" > </div>
+
+
+
+
+</div> <!-- T1_box1 --> 
+
+<div id="T2_box" >  	<!-- T2 Außen -->
+
+<div id="T2_tx1" class="t_tx1" ></div>		<!-- Messwert Bezeichnung-->
+<div id="T2_tx2" class="t_tx2"></div>	
+<div id="T2_tx3" class="t_tx3"></div>	
+<div id="T2_tx4" class="t_tx4"></div>	
+
+<div id="T2_tx5" class="t_tx5"></div>	
+<div id="T2_tx6" class="t_tx6"></div>
+<div id="T2_tx7" class="t_tx7"></div>	
+<div id="T2_tx8" class="t_tx8"></div>
+
+	<!--<img id="T2_symbol" src="pic/dummy.png"  height="150" width="150" align= "left" style="margin: 0px 3000px 0px 100px" > sensor symbol -->
+
+   
+<img id="T2_symbol" src="pic/dummy.png"  height="150" width="150" align= "left" style="margin: -130px 3000px 0px 100px" >	<!-- sensor symbol -->
+
+<div id="T2_name" class="t_name" ></div>		<!-- Messwert Bezeichnung-->
+
+
+
+
+<div id="T2_value" class="t_val" ></div>		<!-- Messwert -->
+<div id="T2_min1" class="t_min"></div>	<!--min -->
+<div id="T2_max1" class="t_max"></div>	<!--min -->
+<div id="T2_avg1" class="t_avg"></div>	<!--min -->
+<div id="T2_trend1" class="t_trend"></div>	<!--min -->
+
+
+<img id="wsym" src="pic/dummy.png" height="70" width="70" align= "left" style="margin: -380px 0px 0px 155px"   >  <!--Wetter Sysmpol -->
+
+
+
+	<!--
+    
+<div id="T2_tx1" class="t_tx1"></div>	
+<div id="T2_tx2" class="t_tx2"></div>	
+<div id="T2_tx3" class="t_tx3"></div>	
+
+<div id="T2_tx4" class="t_tx4"></div>	
+<div id="T2_tx5" class="t_tx5"></div>	
+<div id="T2_tx6" class="t_tx6"></div>	 -->
+
+
+
+
+
+
+
+<div id="gauge2" align= "center" > </div>
+</div> 	<!-- T2_box -->
+
+
+
+
+<!-- Vport -->
+<!-- Vport 0 -->
+<div id="vp0_box" >  	
+<img id="vp0_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" >   <!-- sensor symbol -->
+<div id="vp0_info"      class="name" ></div>
+<img id="vp0_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px"  ><!-- sensor symbol -->
+<div id="vp0_toggle"    class="info" ></div>
+<div id="vp0_start"     class="start" ></div>
+<div id="vp0_end"       class="end" ></div>
+</div>
+<!-- box_vport0 --> 
+<!-- Vport 1 -->
+<div id="vp1_box" >  	
+<img id="vp1_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" onclick="vp2_in()"  ><!-- sensor symbol -->
+<div id="vp1_info"      class="name" ></div>
+<img id="vp1_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px"  ><!-- sensor symbol -->
+<div id="vp1_toggle"    class="info" ></div>
+<div id="vp1_start"     class="start" ></div>
+<div id="vp1_end"       class="end" ></div>
+
+</div>
+<!-- box_vpor1 --> 
+<!-- Vport 2 -->
+<div id="vp2_box" >  	
+<img id="vp2_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" onclick="vp3_in()" ><!-- sensor symbol -->
+<div id="vp2_info"      class="name" ></div>
+<img id="vp2_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px"  ><!-- sensor symbol -->
+<div id="vp2_toggle"    class="info" ></div>
+<div id="vp2_start"     class="start" ></div>
+<div id="vp2_end"       class="end" ></div>
+
+</div>
+<!-- box_vport2 --> 
+<!-- Vport 3 -->
+<div id="vp3_box" >  	
+<img id="vp3_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" onclick="vp4_in()"  ><!-- sensor symbol -->
+<div id="vp3_info"      class="vport_info" ></div>
+<img id="vp3_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px"  ><!-- sensor symbol -->
+<div id="vp3_toggle"    class="info" ></div>
+<div id="vp3_start"     class="start" ></div>
+<div id="vp3_end"       class="end" ></div>
+</div> 
+<!-- box_vport3 --> 
+
+
+<!-- Service -->
+<div id="svt1_box" >  	<!-- service1 -->
+<img id="svt1_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" ><!-- sensor symbol -->
+<div id="svt1_info"      class="name" ></div>
+<img id="svt1_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px" >
+<div id="svt1_days"      class="info" ></div>
+<div id="svt1_last"      class="start" ></div>
+<div id="svt1_next"      class="end" ></div>
+</div> <!-- svt1_box  --> 
+
+<div id="svt2_box" >  	<!-- service2 -->
+<img id="svt2_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" > <!-- sensor symbol -->
+<div id="svt2_info"      class="name" ></div>
+<img id="svt2_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px" >
+<div id="svt2_days"      class="info" ></div>
+<div id="svt2_last"      class="start" ></div>
+<div id="svt2_next"      class="end" ></div>
+</div> <!-- svt2_box  --> 
+
+<div id="svt3_box" >  	<!-- service3 -->
+<img id="svt3_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px"  ><!-- sensor symbol -->
+<div id="svt3_info"      class="name" ></div>
+<img id="svt3_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px" >
+<div id="svt3_days"      class="info" ></div>
+<div id="svt3_last"      class="start" ></div>
+<div id="svt3_next"      class="end" ></div>
+</div> <!-- svt3_box  --> 
+
+<div id="svt4_box" >  	<!-- service4 -->
+<img id="svt4_symbol"    src="pic/dummy.png" height="150" width="150" align= "left" style="margin: 0px 100px 0px 60px" ><!-- sensor symbol -->
+<div id="svt4_info"      class="name" ></div>
+<img id="svt4_mode"      src="pic/dummy.png" height="40" width="120" align= "left"  style="margin: 5px -10px 0px 20px" >
+<div id="svt4_days"      class="info" ></div>
+<div id="svt4_last"      class="start" ></div>
+<div id="svt4_next"      class="end" ></div>
+
+
+</div> <!-- svt4_box  --> 
+</div> <!-- data box  --> 
+</div> <!-- status  --> 
+
+
+<!-- Input 1 SIS --> 
+<div id="input_box1" style="display:none">
+<form>
+ <div class="cc-selector">
+    <div id="radioset1">
+          <div id="input1_txt" class="input1_txt" ></div> <br>
+          <div id="input2_txt" class="input1_txt" ></div> <br>
+           <input id="vp_mode_4" type="radio" name="vp_mode" value=4 align= "left" style="margin: 0px 0px 0px 50px" >
+           <label class="vp_mode-cc e"for="vp_mode_4"></label>    
+           <input id="vp_mode_0" type="radio" name="vp_mode" value=0   align= "left" style="margin: 0px 0px 0px -100px" >
+           <label class="vp_mode-cc a" for="vp_mode_0">   </label> 
+           <input id="vp_mode_1" type="radio" name="vp_mode" value=1 align= "left" style="margin: 0px 0px 0px -100px" >
+           <label class="vp_mode-cc b" for="vp_mode_1"> </label> <br><br>
+           <input id="vp_mode_5" type="radio" name="vp_mode" value=5 >
+           <label class="vp_mode-cc f"for="vp_mode_5"></label> 
+           <input id="vp_mode_2" type="radio" name="vp_mode" value=2 align= "left" style="margin: 0px 0px 0px 150px" >
+           <label class="vp_mode-cc c"for="vp_mode_2"> </label> <br><br>
+           <input id="vp_mode_6" type="radio" name="vp_mode" value=6 >
+           <label class="vp_mode-cc g"for="vp_mode_6"></label> 
+           <input id="vp_mode_3" type="radio" name="vp_mode" value=3 align= "left" style="margin: 0px 0px 0px 150px" >
+           <label class="vp_mode-cc d"for="vp_mode_3"> </label> <br><br>
+           <img src="pic/cancel.png" width="130" height="130" align= "left" style=  "margin: 20px 0px 0px 555px"   id="btn_vp_cancel"> 
+           <img src="pic/ok.png" width="130" height="130" align= "left" style=     "margin: 20px 0px 0px 80px"  id="btn_vp_ok">
+         
+        <div id="updown1" >    
+           <div id="updown_box1" >  <!-- updown_box1  --> 	
+              <img src="pic/up_a.png"   width="150" height="100" id="hours_up"   align= "left" style="margin: 0px 0px 0px 50px">
+              <img src="pic/down_a.png" width="150" height="100" id="hours_down" align= "left" style="margin: 10px 0px 0px 50px"   > 
+              <div id="hours"  class="updown"  > </div> 
+               <div id="updown_box2" >  	<!-- updown_box2  --> 
+                  <img src="pic/up_a.png"    width="150" height="100" id="minutes_up"    align= "left" style="margin: 0px 0px 0px 50px">
+                  <img src="pic/down_a.png"  width="150" height="100" id="minutes_down"  align= "left" style="margin: 10px 0px 0px 50px"   > 
+                  <div id="minutes"  class="updown" > </div>   
+               </div>   <!-- updown_box2  --> 
+           </div>  <!-- updown_box1  --> 
+        </div>  <!-- updown1  --> 
+    </div> <!-- radioset  --> 
+ </div> <!-- class cc-selector  -->  
+</form>    
+</div> <!-- input_box1 -->  
+  
+
+<!-- Input 2 ST --> 
+<div id="input_box2" style="display:none" >
+    <div id="datepicker"   align= "left" style="margin: 0px 0px 0px 100px"                                ></div>
+    <img src="pic/cancel.png" width="95" height="95" align= "left" style=  "margin: -98px 0px 0px 400px"   id="btn_st_cancel"> 
+    <img src="pic/ok.png" width="95" height="95" align= "left" style=     "margin: -98px 0px 0px 600px"  id="btn_st_ok">
+    <div id="date1"  class="updown" > </div>   
+</div>   <!--  input_box2 --> 
+
+
+
+<!-- Graphik 1 --> 
+<div id="graphic_box1" style="display:none" >  
+<!--   <div id="graph_info" class="t_name" ></div>	   --> 
+    
+    
+<!-- parking lot  -->
+<div id="T3_box"                       >  	
+<div id="T3_value"                    style="display:none"      >      </div>
+<div id="gauge3" 				      style="display:none"  >          </div>
+<div id="T3_min1" class="t_min"       style="display:none"  >        </div>	
+<div id="T3_max1" class="t_max"       style="display:none"  >        </div>	
+<div id="T3_avg1" class="t_avg"       style="display:none"  >        </div>	
+<div id="T3_trend1" class="t_trend"   style="display:none"  >        </div>	
+<div id="T3_name"                     style="display:none"      >      </div>
+<img id="T3_symbol" src="pic/dummy.png"  height="0" width="0" align= "left" visible="false" style="margin: 0px 0px 0px 0px" style="display:none >
+</div>
+
+
+   
+<img src="pic/ret2.png" width="50" height="50" align= "left" style=     "margin: 0px 0px 0px 0px"  id="btn_gr_ret">     
+<div id="graph0" class="graph0" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="graph1" class="graph1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="graph2" class="graph2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    
+</div>   <!--  Graphik 1 --> 
+
+
+<!-- JS extern -->
+<script type="text/javascript" src="ext/jquery/jquery-1.12.4.js"></script>	     <!-- jquery-ui 1.12.4. -->   
+<script type="text/javascript" src="ext/jquery-ui/jquery-ui.js"></script>       <!-- jquery-ui v1.12.1 -->     
+
+
+<script type="text/javascript" src="ext/hch/js/highcharts.js"></script>									<!-- highcharts -->
+<script type="text/javascript" src="ext/hch/js/highcharts-more.js"></script>								<!-- highcharts -->
+<script type="text/javascript" src="ext/hch/js/modules/exporting.js"></script>								<!-- highcharts -->
+<script type="text/javascript" src="ext/bigscreen/bigscreen.min.js"></script>   
+
+<!-- JS intern -->
+<script type="text/javascript" src="gauge0.js"></script>						
+<script type="text/javascript" src="gauge1.js"></script>					
+<script type="text/javascript" src="gauge2.js"></script>					
+<script type="text/javascript" src="gauge3.js"></script>					
+<script type="text/javascript" src="symphy.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>
